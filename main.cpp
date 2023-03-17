@@ -46,7 +46,7 @@ public:
     }
 };
 
-// Выполнить BFS на Graph, начиная с вершины `v`
+// Выполнить BFS на Graph, начиная с вершины `v` (В ширину)
 void BFS(Graph const& graph, int v, vector<bool>& discovered)
 {
     // создаем queue для выполнения BFS
@@ -80,6 +80,26 @@ void BFS(Graph const& graph, int v, vector<bool>& discovered)
         }
     }
 }
+
+// Функция для обхода DFS на Graphе на Graphе (В глубину)
+void DFS(Graph const& graph, int v, vector<bool>& discovered)
+{
+    // помечаем текущий узел как обнаруженный
+    discovered[v] = true;
+
+    // печатаем текущий узел
+    cout << v << " ";
+
+    // делаем для каждого ребра (v, u)
+    for (int u : graph.adjList[v])
+    {
+        // если `u` еще не обнаружен
+        if (!discovered[u]) {
+            DFS(graph, u, discovered);
+        }
+    }
+}
+
 
 vector<Edge> edges;
 
