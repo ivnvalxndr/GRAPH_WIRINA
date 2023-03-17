@@ -11,10 +11,8 @@
 #include <queue> // очередь
 #include <vector>
 
-
 using namespace std;
 using namespace sf;
-
 
 // https://www.techiedelight.com/ru/breadth-first-search/ Статья
 // https://www.techiedelight.com/ru/depth-first-search/ 
