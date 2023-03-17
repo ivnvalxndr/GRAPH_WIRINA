@@ -100,7 +100,6 @@ void DFS(Graph const& graph, int v, vector<bool>& discovered)
     }
 }
 
-
 vector<Edge> edges;
 
 int main()
@@ -161,9 +160,7 @@ int main()
         }
     }        
 
-
     cout << "\n";
-
 
     // Свойства окна Windows
     sf::RenderWindow window(sf::VideoMode(1280, 720), L"Граф с использованием SFML");
@@ -178,11 +175,6 @@ int main()
 
     if (!font.loadFromFile("Font/BankGothic Md BT Medium.otf"))
         return EXIT_FAILURE;
-    //sf::Text text("Hello SFML", font, 50);
-
-
-    //font.loadFromFile("Font/BankGothic Md BT Medium.otf");
-
 
     sf::CircleShape shapeFirst(40.f), shapeSecond(40.f), shapeThird(40.f), shapeFour(40.f), shapeFive(40.f); // рисуем круг
 
@@ -204,19 +196,6 @@ int main()
     line1.setFillColor(Color::Black);
     line1.setPosition(550, 130);
 
-    valueNode1.setFont(font);
-    valueNode1.setFillColor(Color::Red);
-    valueNode1.setCharacterSize(50);
-    valueNode1.setPosition(575, 10); // +5 -90
-    valueNode1.setString("0");
-
-    valueLine1.setFont(font);                      // (Значение отрезка 1-2)
-    valueLine1.setFillColor(Color::Black);
-    valueLine1.setCharacterSize(25);
-    valueLine1.setPosition(370, 140); // текст   
-    valueLine1.setString("1");
-
-
     // 2 нода
     shapeSecond.setFillColor(sf::Color::Green);
     shapeSecond.setPosition(200, 200);
@@ -230,32 +209,15 @@ int main()
     value2.setPosition(220, 200);
     value2.setString("2");
 
-    valueNode2.setFont(font);
-    valueNode2.setFillColor(Color::Red);
-    valueNode2.setCharacterSize(50);
-    valueNode2.setPosition(215, 130); // +5 -90
-    valueNode2.setString("0");
-
     RectangleShape line7(Vector2f(270, 5)); // длина, толщина (2-3)
     line7.rotate(80); // Поворот
     line7.setFillColor(Color::Black);
     line7.setPosition(250, 280);
-    valueLine7.setFont(font);
-    valueLine7.setFillColor(Color::Black);
-    valueLine7.setCharacterSize(25);
-    valueLine7.setPosition(200, 370); // текст   
-    valueLine7.setString("3");
 
     RectangleShape line10(Vector2f(520, 5)); // длина, толщина (2-5)
     line10.rotate(183); // Поворот
     line10.setFillColor(Color::Black);
     line10.setPosition(800, 270);
-    valueLine10.setFont(font);
-    valueLine10.setFillColor(Color::Black);
-    valueLine10.setCharacterSize(25);
-    valueLine10.setPosition(330, 200); // текст   
-    valueLine10.setString("3");
-
 
     // 3 нода
     shapeThird.setFillColor(sf::Color::Green);
@@ -270,33 +232,15 @@ int main()
     value3.setPosition(280, 550);
     value3.setString("3");
 
-    valueNode3.setFont(font);
-    valueNode3.setFillColor(Color::Red);
-    valueNode3.setCharacterSize(50);
-    valueNode3.setPosition(285, 480); // +5 -90
-    valueNode3.setString("0");
-
     RectangleShape line3(Vector2f(470, 5)); // длина, толщина (1-3)
     line3.rotate(120); // Поворот
     line3.setFillColor(Color::Black);
     line3.setPosition(565, 150);
-    valueLine3.setFont(font);
-    valueLine3.setFillColor(Color::Black);
-    valueLine3.setCharacterSize(25);
-    valueLine3.setPosition(480, 200); // текст 650, 200
-    //valueLine3.setString("56");
-    valueLine3.setRotation(-50);
 
     RectangleShape line2(Vector2f(550, 5)); // длина, толщина (3-5)
     line2.rotate(328); // Поворот
     line2.setFillColor(Color::Black);
     line2.setPosition(335, 570);
-    valueLine2.setFont(font);
-    valueLine2.setFillColor(Color::Black);
-    valueLine2.setCharacterSize(25);
-    valueLine2.setPosition(350, 500); // текст
-    valueLine2.setString("56");
-    valueLine2.setRotation(-30);
 
     // Четвертая нода
     shapeFour.setFillColor(sf::Color::Green);
@@ -311,48 +255,20 @@ int main()
     value4.setPosition(690, 530);
     value4.setString("4");
 
-    valueNode4.setFont(font);
-    valueNode4.setFillColor(Color::Red);
-    valueNode4.setCharacterSize(50);
-    valueNode4.setPosition(695, 450); // +5 -90
-    valueNode4.setString("0");
-
     RectangleShape line4(Vector2f(385, 5)); // длина, толщина (1-4)
     line4.rotate(75); // Поворот
     line4.setFillColor(Color::Black);
     line4.setPosition(600, 158);
-
-    valueLine4.setFont(font);
-    valueLine4.setFillColor(Color::Black);
-    valueLine4.setCharacterSize(25);
-    valueLine4.setPosition(650, 200); // текст 275 / 65
-    //valueLine4.setString("56");
-    valueLine4.setRotation(70);
-
 
     RectangleShape line8(Vector2f(325, 5)); // длина, толщина (4-3)
     line8.rotate(178); // Поворот
     line8.setFillColor(Color::Black);
     line8.setPosition(670, 580);
 
-    valueLine8.setFont(font);
-    valueLine8.setFillColor(Color::Black);
-    valueLine8.setCharacterSize(25);
-    valueLine8.setPosition(500, 580); // текст
-    //valueLine8.setString("56");
-    //valueLine6.setRotation(40);
-
     RectangleShape line9(Vector2f(495, 5)); // длина, толщина (4-2)
     line9.rotate(216); // Поворот
     line9.setFillColor(Color::Black);
     line9.setPosition(670, 560);
-
-    valueLine9.setFont(font);
-    valueLine9.setFillColor(Color::Black);
-    valueLine9.setCharacterSize(25);
-    valueLine9.setPosition(380, 300); // текст
-    valueLine9.setString("56");
-    valueLine9.setRotation(40);
 
     // Пятая нода
     shapeFive.setFillColor(sf::Color::Green);
@@ -367,33 +283,15 @@ int main()
     value5.setPosition(820, 230);
     value5.setString("5");
 
-    valueNode5.setFont(font);
-    valueNode5.setFillColor(Color::Red);
-    valueNode5.setCharacterSize(50);
-    valueNode5.setPosition(825, 150); // +5 -90
-    valueNode5.setString("0");
-
     RectangleShape line5(Vector2f(210, 5)); // длина, толщина (1-5)
     line5.rotate(35); // Поворот
     line5.setFillColor(Color::Black);
     line5.setPosition(630, 130);
 
-    valueLine5.setFont(font);
-    valueLine5.setFillColor(Color::Black);
-    valueLine5.setCharacterSize(25);
-    valueLine5.setPosition(760, 180); // текст 
-    //valueLine5.setString("56");
-    valueLine5.setRotation(40);
-
     RectangleShape line6(Vector2f(240, 5)); // длина, толщина (5-4)
     line6.rotate(110); // Поворот
     line6.setFillColor(Color::Black);
     line6.setPosition(820, 310);
-
-    valueLine6.setFont(font);
-    valueLine6.setFillColor(Color::Black);
-    valueLine6.setCharacterSize(25);
-    valueLine6.setPosition(800, 400); // текст
 
     map <pair<int, int>, RectangleShape> mp; // map 1 - составной ключ из двух интов a[i][j], 2 - линия
     mp[make_pair(1, 2)] = line1;
@@ -406,9 +304,6 @@ int main()
     mp[make_pair(3, 4)] = line8;
     mp[make_pair(3, 5)] = line2;
     mp[make_pair(4, 5)] = line6;
-
-
-
 
     while (window.isOpen())
     {
@@ -433,7 +328,6 @@ int main()
                 }
             }
         }
-
 
         window.clear(sf::Color::Cyan);
 
